@@ -6,7 +6,8 @@ import theme from '../../styles/theme';
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: theme.colors.teal_green
+    backgroundColor: theme.colors.teal_green,
+    elevation: 0
   }
 })
 
@@ -14,7 +15,7 @@ const HeaderBar = ({ title, rightIcons = [] }) => (
   <Appbar.Header style={styles.container}>
     <Appbar.Content title={title} />
     {rightIcons.map((rightIcon) => (
-      <Appbar.Action icon={rightIcon?.name} onPress={rightIcon?.onPress}/>
+      <Appbar.Action icon={rightIcon?.name} onPress={rightIcon?.onPress} />
     ))}
   </Appbar.Header>
 );

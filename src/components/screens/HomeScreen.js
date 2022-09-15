@@ -1,7 +1,7 @@
 import React, { useLayoutEffect } from 'react';
-import { Text, View } from "react-native";
 
 import HeaderBar from '../bars/HeaderBar';
+import HomeTabs from '../navigation/HomeTabs';
 
 const HomeScreen = ({ navigation }) => {
     useLayoutEffect(() => {
@@ -19,9 +19,7 @@ const HomeScreen = ({ navigation }) => {
     }, [])
 
     return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Text onPress={() => navigation.navigate('Home1')}>Home Screen</Text>
-        </View>
+        <HomeTabs />
     )
 };
 
